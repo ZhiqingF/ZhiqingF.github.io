@@ -1,0 +1,214 @@
+/*.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: right; }
+.item4 { grid-area: footer; }
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  /*grid-template-areas:
+    'header header header header header header'
+    'main mian right right right right'
+    'footer footer footer footer footer footer';*/
+    
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/*.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr ;
+  grid-auto-rows: minmax(200px,auto);
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  
+}*/
+
+body{
+  background-image: linear-gradient(rgb(122, 155, 167),rgb(205, 208, 209));
+  background-size: cover;
+  background-position: center;
+}
+
+
+.item1{
+  /* grid-column-start: 1; */
+  /* grid-column-end: 3; */
+  justify-self: right;
+  align-items:right;
+  height: auto;
+  width: auto;
+  display: flex;
+}
+
+nav{
+  text-align: right;
+  flex: 1;
+}
+
+nav ul li{
+  list-style: none;
+  display:inline-block;
+  margin-left: 60px;
+  font-family:initial;
+  position: relative;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(252, 246, 246);
+  font-size:16px ;
+  text-transform: uppercase;
+}
+
+nav ul li ::after{
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #d8e2e1;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+nav ul li :hover::after{
+  width: 100%;
+
+}
+
+.item2{
+  /* grid-column: 1 ; */
+  /* grid-row: 1 */
+  float: left;
+  align-items:center;
+}
+
+h1{
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.item2 p{
+  color: white;
+  font-size: 20px;
+  font-family:initial;
+  padding: 20px;
+  margin: 30px;
+}
+
+.item3{
+  width: 75%;
+  float: right;
+
+}
+
+.item3 p{
+  color: white;
+  font-size: 15px;
+  font-family:initial;
+}
+.card{
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: width 2s, height 2s, transform 2s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 200px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%; 
+}
+
+.card1{
+  background-image:url("Guangzhou_CantonTower.jpg");
+}
+.card2{
+  background-image: url("Guangzhou_LiwanRiver3.jpg");
+}
+.card3{
+  background-image:url("Guangzhou_CantoneseOpera.jpg");
+}
+.card4{
+  background-image:url("Guangzhou_Dimsum.jpg");
+}
+
+h3{
+  color:rgb(234, 233, 243);
+} 
+
+/*.item4{
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+
+.item4 ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.item4 li {
+  padding:0 10px;
+}
+
+.item4 ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.item4 ul a:hover {
+  opacity:1;
+}
+
+.item4 .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.item4 .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.item4 .social > a:hover {
+  opacity:0.9;
+}
+
+.item4 .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+*/
