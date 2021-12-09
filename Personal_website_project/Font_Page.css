@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(198, 213, 221);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------------------*/
+.navbar ul{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color:white;
+}
+
+.navbar li{
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: rgb(58, 56, 56);;
+  margin: 20px;
+  font-weight:bold;
+  font-family: initial;
+}
+
+.logo{
+  flex: 1;
+  font-size: 1.5rem;/*24px*/
+  user-select: none;
+}
+.toggle{
+  display: none;
+}
+
+.links:hover{
+  background-color: rgb(252, 251, 249);
+  border-radius: 20px;
+}
+
+.links:hover a{
+  color:black ;
+}
+
+@media (max-width:600px){
+  .navbar ul{
+    flex-wrap:wrap;
+  }
+  .toggle{
+    display:block;
+  }
+  .links{
+    display:none;
+    width:100%;
+    text-align:center;
+  }
+  .active{
+    display: block;
+  }
+}
+
+/*.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.nav{
+    text-align: right;
+    flex: 1;
+  }
+
+.nav ul{
+    list-style: none;
+}
+
+.nav ul li{
+    list-style: none;
+    display:inline-block;
+    margin-left: 60px;
+    margin-right: 20px;
+    font-family:initial;
+    position: relative;
+  }
+  
+.nav ul li a{
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    padding: 12px;
+    line-height: 25px;
+    color: black;
+    font-size:16px ;
+    text-transform: uppercase;
+  }
+
+a.active, a:hover{
+    transition: 0.5s ease;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+  
+.nav ul li ::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #6b7271;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.5s ease;
+  }
+  
+.nav ul li :hover::after{
+    width: 100%;
+  }
+  
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar .fas{
+  display: block;
+  color: white;
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+
+/*responsive*/
+/*@media only screen and (max-width:952px){
+    .nav ul li a{
+        font-size:16px ;
+      }
+}
+
+@media(max-width:500px){
+    .checkbtn{
+        display: block;
+    }
+  
+    .nav ul li a{
+        font-size: 20px;
+        font-weight:bolder;
+        float:none;
+        display: block;
+    }
+    a.active, a:hover{
+      transition: 0.5s ease;
+  }
+    
+}
+/*-----------------------------*/
+
+.content-col{
+    width: 40%;
+
+}
+.image-col{
+    padding-top: 30px;
+    width: 60%;
+    /*display: flex;*/
+    justify-content: space-around;
+}
+
+.card{
+    width: 320px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.2s ease;/*Mouse over the element below to see a CSS transition effect*/
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.2s ease;/*specifies a transition effect with a slow start, then fast, then end slowly*/
+    width: 40%; 
+  }
+.card1{
+    background-image:url("Guangzhou_CantonTower.jpg");
+  }
+  .card2{
+    background-image: url("Guangzhou_LiwanRiver3.jpg");
+  }
+  .card3{
+    background-image:url("Guangzhou_CantoneseOpera.jpg");
+  }
+  .card4{
+    background-image:url("Guangzhou_Dimsum.jpg");
+  }
+
+.content-col h1{
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    /*padding: 100px;*/
+    text-transform: uppercase;
+    margin:50px;
+    align-items:flex-start;
+    
+}
+
+.content-col p{
+    padding: 40px;
+    margin: 20px;
+    color: rgb(43, 41, 41);
+    
+}
+
+/*responsive*/
+@media(max-width:700px){
+    .row{
+        padding: auto;
+        flex-direction: column;
+    }
+    .row .col{
+      margin: 0;
+      text-align: left;
+      width: 100%;
+      flex-direction: column;
+
+  }
+  .content-col h1{
+      font-size: 60px;
+      padding: 50px;
+      text-decoration: solid;
+  }
+  .content-col p{
+      padding: 0;
+      margin: 40px;
+      color: rgb(43, 41, 41);
+      width: 70px;;  
+  }
+    
+}
+@media(max-width:1285px){
+    .content-col h1{
+        font-size: 60px;
+        padding: 50px;
+        text-align: left;
+        margin: 10px;
+        margin-right: 10px;
+    }
+    .content-col p{
+        padding: 0;
+        margin: 40px;
+        color: rgb(43, 41, 41);
+        width:fit-content;
+        
+    }
+}
+
+/*.explore .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.image-gallery img{
+    max-width: 300px;
+    height: 350px;
+    margin: 10px;
+}
+*/
+
+
+/*.item2{
+    float: left;
+    align-items:center;
+  }*/
+  
+  /*.item2 h1{
+    color: white;
+    font-size:  140px;;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  
+  .introduce p{
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  color:white;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  text-align:center;
+  margin-bottom: 70px;
+  }
+  
+  .item3{
+    float: right;
+  
+  }
+  
+  .item3 p{
+    color: white;
+    font-size: 15px;
+    font-family:initial;
+  }
+  .card{
+    width: 350px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: width 2s, height 2s, transform 2s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%; 
+  }
+  
+  .card1{
+    background-image:url("Guangzhou_CantonTower.jpg");
+  }
+  .card2{
+    background-image: url("Guangzhou_LiwanRiver3.jpg");
+  }
+  .card3{
+    background-image:url("Guangzhou_CantoneseOpera.jpg");
+  }
+  .card4{
+    background-image:url("Guangzhou_Dimsum.jpg");
+  }
+  
+  h3{
+    color:rgb(234, 233, 243);
+  } */
+
+  /*-----------------------------------------------------*/
+.container{
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    /*background-color: rgb(189, 189, 179);*/
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: rgb(58, 56, 56);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(163, 158, 148);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color:black;
+    display: block;
+    transition: all 0,2s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: raga(255,255,255,0.2);
+    margin-left: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all 0,2s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: white;
+}
+
+/*responsive*/
+@media(max-width:700px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:500px){
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }  
+}
